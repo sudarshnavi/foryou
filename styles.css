@@ -2,6 +2,7 @@
   --bg: #2C2C2C;
   --card: #ffffff;
   --text: #F3F4F4;
+  --card-text: #2C2C2C;
   --accent: #853953;
   --accent-soft: #612D53;
   --line: #DADCDD;
@@ -54,27 +55,18 @@ h3 {
   gap: 1rem;
 }
 
+/* CARDS */
+
 .memory-card,
 .countdown-card,
 .secret-section,
-.timeline li {
+.timeline li,
+.modal-card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(225, 79, 134, 0.1);
-}
-
-.photo-section{
-  text-align:center;
-}
-
-.us-photo{
-  width:100%;
-  max-width:500px;
-  border-radius:20px;
-  margin-top:1rem;
-  box-shadow:0 12px 30px rgba(225,79,134,0.2);
-  border:3px solid var(--accent);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  color: var(--card-text);
 }
 
 .memory-card {
@@ -103,21 +95,20 @@ h3 {
   font-size: 0.8rem;
 }
 
-.playlist {
-  margin: 0;
-  padding-left: 1.2rem;
-  display: grid;
-  gap: 0.6rem;
+.photo-section {
+  text-align: center;
 }
 
-.playlist a {
-  color: #b61f61;
-  text-decoration: none;
+.us-photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin-top: 1rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  border: 3px solid var(--accent);
 }
 
-.playlist a:hover {
-  text-decoration: underline;
-}
+/* COUNTDOWN */
 
 .countdown-card,
 .secret-section {
@@ -125,23 +116,27 @@ h3 {
 }
 
 .countdown {
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
   font-weight: 700;
   margin-top: 0.3rem;
 }
+
+/* FORM */
 
 input,
 button {
   font: inherit;
 }
 
-#nextMeet,
 #passwordInput {
   margin-top: 0.6rem;
-  border: 1px solid #eb8db2;
+  border: 1px solid var(--line);
   border-radius: 12px;
   padding: 0.45rem 0.65rem;
+  width: 100%;
 }
+
+/* BUTTON */
 
 button {
   border: none;
@@ -152,11 +147,7 @@ button {
   cursor: pointer;
 }
 
-.chip {
-  background: #fff;
-  color: var(--accent);
-  border: 1px solid var(--accent-soft);
-}
+/* HEARTS */
 
 .heart-row {
   display: flex;
@@ -174,6 +165,8 @@ button {
   font-weight: 600;
 }
 
+/* MODAL */
+
 .hidden {
   display: none;
 }
@@ -186,26 +179,27 @@ button {
 }
 
 .modal-card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 18px;
   max-width: 450px;
   width: 100%;
   padding: 1.5rem;
-  box-shadow: 0 15px 30px rgba(208, 38, 108, 0.15);
-  
 }
 
+/* HOVER EFFECTS */
+
 .memory-card:hover,
-.timeline li:hover{
+.timeline li:hover {
   transform: translateY(-4px);
   transition: 0.3s ease;
 }
 
+/* HINT */
+
 .hint {
-  color: #b64e7e;
+  color: var(--accent);
   margin-top: 0.7rem;
 }
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -229,22 +223,4 @@ button {
     justify-content: center;
   }
 
-  .us-photo {
-    max-width: 100%;
-  }
-
-}
-
-
-.countdown {
-  font-size: clamp(1.2rem, 4vw, 1.6rem);
-}
-
-#passwordInput {
-  width: 100%;
-}
-
-
-button {
-  width: fit-content;
 }
