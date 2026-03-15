@@ -1,7 +1,7 @@
 :root {
-  --bg: #1c0e28;
+  --bg: #2C2C2C;
   --card: #ffffff;
-  --text: #2C2C2C;
+  --text: #F3F4F4;
   --accent: #853953;
   --accent-soft: #612D53;
   --line: #DADCDD;
@@ -15,7 +15,8 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text);
-  background: linear-gradient(160deg, #F3F4F4, #E8E9EA);
+  background: linear-gradient(160deg, #2C2C2C, #1F1F1F);
+  background-attachment: fixed;
 }
 
 h1,
