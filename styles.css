@@ -1,0 +1,249 @@
+:root {
+  --bg: #F3F4F4;
+  --card: #ffffff;
+  --text: #2C2C2C;
+  --accent: #853953;
+  --accent-soft: #612D53;
+  --line: #DADCDD;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: linear-gradient(160deg, #F3F4F4, #E8E9EA);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  margin-top: 0;
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.2rem;
+}
+
+.hero {
+  padding-top: 4rem;
+}
+
+.eyebrow {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  font-size: 0.75rem;
+}
+
+.subtext {
+  max-width: 680px;
+}
+
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.memory-card,
+.countdown-card,
+.secret-section,
+.timeline li {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(225, 79, 134, 0.1);
+}
+
+.photo-section{
+  text-align:center;
+}
+
+.us-photo{
+  width:100%;
+  max-width:500px;
+  border-radius:20px;
+  margin-top:1rem;
+  box-shadow:0 12px 30px rgba(225,79,134,0.2);
+  border:3px solid var(--accent);
+}
+
+.memory-card {
+  padding: 1rem;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.timeline li {
+  padding: 1rem;
+}
+
+.date {
+  display: inline-block;
+  background: #E9DCE3;
+  color: #612D53;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.playlist {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.playlist a {
+  color: #b61f61;
+  text-decoration: none;
+}
+
+.playlist a:hover {
+  text-decoration: underline;
+}
+
+.countdown-card,
+.secret-section {
+  padding: 1.3rem;
+}
+
+.countdown {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0.3rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+#nextMeet,
+#passwordInput {
+  margin-top: 0.6rem;
+  border: 1px solid #eb8db2;
+  border-radius: 12px;
+  padding: 0.45rem 0.65rem;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.chip {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+}
+
+.heart-row {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.heart {
+  background: #fff;
+  color: var(--accent);
+  border: 1px solid var(--accent-soft);
+}
+
+.secret-message {
+  min-height: 1.5rem;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.modal-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  max-width: 450px;
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 15px 30px rgba(208, 38, 108, 0.15);
+  
+}
+
+.memory-card:hover,
+.timeline li:hover{
+  transform: translateY(-4px);
+  transition: 0.3s ease;
+}
+
+.hint {
+  color: #b64e7e;
+  margin-top: 0.7rem;
+}
+
+@media (max-width: 600px) {
+
+  .section {
+    padding: 1.8rem 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heart-row {
+    justify-content: center;
+  }
+
+  .us-photo {
+    max-width: 100%;
+  }
+
+}
+
+
+.countdown {
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+}
+
+#passwordInput {
+  width: 100%;
+}
+
+
+button {
+  width: fit-content;
+}
